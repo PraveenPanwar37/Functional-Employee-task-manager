@@ -1,4 +1,4 @@
-👨‍💼 Employee Task Manager
+**👨‍💼 Employee Task Manager**
 Employee Task Manager is a role-based task management web app built with React, where both Admin and Employee users can log in, manage tasks, and track task statuses efficiently — all without a backend using localStorage.
 
 🚀 Features
