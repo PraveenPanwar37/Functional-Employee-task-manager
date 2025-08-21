@@ -16,7 +16,13 @@ html, body{
 #taskList::-webkit-scrollbar {
     display: none;
 }
+#taskList{
+    scrollbar-width: none;
+}
 
 #AllEmployees::-webkit-scrollbar {
     display: none;
+}
+#AllEmployees{
+    scrollbar-width: none;
 }

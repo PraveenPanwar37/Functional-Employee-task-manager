@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const CreateTask = () => {
-  const { userData, setUserData } = useContext(AuthContext);
+const { userData, setUserData, loading } = useContext(AuthContext);
 
   const [title, setTitle] = useState("");
   const [assign, setAssign] = useState("");
@@ -70,7 +70,7 @@ const handleExportData = () => {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 };
-
+if (loading) return <div>Loading...</div>;
   return (
     <div>
       <form onSubmit={submitHandler} className="flex w-full px-2 font-medium flex-wrap items-start justify-between">
@@ -86,17 +86,17 @@ const handleExportData = () => {
           <div>
   <h3>Assign to</h3>
   <select
-    value={assign}
-    onChange={(e) => setAssign(e.target.value)}
-    className="w-[80%] p-2 border border-gray-500 rounded"
-  >
-    <option value="" disabled>Select an employee</option>
-    {userData.employees.map((emp) => (
-      <option key={emp.id} value={emp.name}>
-        {emp.name}
-      </option>
-    ))}
-  </select>
+  value={assign}
+  onChange={(e) => setAssign(e.target.value)}
+  className="w-[80%] p-2 border border-gray-500 rounded"
+>
+  <option value="" disabled>Select an employee</option>
+  {userData?.employees?.map((emp) => (
+    <option key={emp.id} value={emp.name}>
+      {emp.name}
+    </option>
+  ))}
+</select>
 </div>
           <div>
             <h3>Category</h3>

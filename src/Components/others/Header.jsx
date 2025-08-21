@@ -13,7 +13,6 @@ const Header = ({data, changeUser}) => {
     <div>
         <div className='header p-3 flex items-center justify-between flex-wrap'>
       <h1 className='text-2xl font-bold text-black'>Employ Task Manager
-        <span className='block text-[1.3vw]'>Hello {data.name} 👋</span>
       </h1>
       <button onClick={logOutUser} className='cursor-pointer px-4 py-1 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-400 hover:to-orange-400 font-medium mr-8'>Log out</button>
       </div>
