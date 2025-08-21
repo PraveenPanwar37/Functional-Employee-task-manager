@@ -14,6 +14,7 @@ const App = () => {
   if (!localStorage.getItem("employees")) {
     setLocalStorage();
   }
+  localStorage.clear(); 
 
   useEffect(() => {
     if (!localStorage.getItem("employees")) {
